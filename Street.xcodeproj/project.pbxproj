@@ -17,6 +17,7 @@
 		711EA52E228A688100118C6F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52D228A688100118C6F /* ShopViewController.swift */; };
 		711EA530228A689500118C6F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52F228A689500118C6F /* MineViewController.swift */; };
 		711EA534228A6FC900118C6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA533228A6FC900118C6F /* Common.swift */; };
+		71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71678F8A228AE3C30003934D /* StreetListCell.swift */; };
 		71D865EF228992750074B051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D865EE228992750074B051 /* AppDelegate.swift */; };
 		71D865F4228992750074B051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F2228992750074B051 /* Main.storyboard */; };
 		71D865F6228992750074B051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F5228992750074B051 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		711EA52D228A688100118C6F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		711EA52F228A689500118C6F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		711EA533228A6FC900118C6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		71678F8A228AE3C30003934D /* StreetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetListCell.swift; sourceTree = "<group>"; };
 		71D865EB228992750074B051 /* Street.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Street.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D865EE228992750074B051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D865F3228992750074B051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		711EA51E228A5E6E00118C6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71678F8A228AE3C30003934D /* StreetListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Street/Pods-Street-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -596,6 +600,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -619,6 +624,7 @@
 				711EA52A228A685F00118C6F /* AttentionViewController.swift in Sources */,
 				711EA524228A600000118C6F /* STBaseViewController.swift in Sources */,
 				71D8661D228996090074B051 /* STTabBarViewController.swift in Sources */,
+				71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */,
 				711EA534228A6FC900118C6F /* Common.swift in Sources */,
 				711EA530228A689500118C6F /* MineViewController.swift in Sources */,
 			);

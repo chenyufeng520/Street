@@ -21,6 +21,11 @@ class STBaseViewController: UIViewController {
         
         return UIStatusBarStyle.lightContent
     }
+    
+    deinit {
+        print("\(self)页面释放了")
+    }
+    
     /*
     // MARK: - Navigation
 

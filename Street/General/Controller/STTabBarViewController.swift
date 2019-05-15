@@ -45,6 +45,10 @@ class STTabBarViewController: UITabBarController {
         childController.tabBarItem.title = title;
         childController.title = title
         
+        if title.characters.count == 0 {
+            childController.tabBarItem.imageInsets = UIEdgeInsets.init(top: 6, left: 0, bottom: -6, right: 0)
+        }
+        
         let navC = STNavigationController(rootViewController: childController)
         self.addChild(navC)
     }

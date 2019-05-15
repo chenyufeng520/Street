@@ -8,6 +8,7 @@ target 'Street' do
 pod 'SnapKit'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'MJRefresh'
 
   # Pods for Street
 
