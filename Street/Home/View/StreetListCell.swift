@@ -8,11 +8,14 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class StreetListCell: UITableViewCell {
     
     var userImageView = UIImageView()
     var userNickName = UILabel()
+    var timeLable = UILabel()
+    
     var showImageView = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -29,19 +32,27 @@ class StreetListCell: UITableViewCell {
     func configUI() {
         
         userImageView = UIImageView.init()
-        userImageView.backgroundColor = UIColor.yellow
         userImageView.layer.cornerRadius = 20
+        userImageView.layer.masksToBounds = true
+        userImageView.contentMode = .scaleAspectFill
         userImageView.layer.masksToBounds = true
         self.contentView.addSubview(userImageView)
         
         userNickName = UILabel.init()
         userNickName.textColor = UIColor.black
-        userNickName.font = UIFont.systemFont(ofSize: 16)
+        userNickName.font = UIFont.systemFont(ofSize: 14)
         userNickName.textAlignment = .left
         self.contentView.addSubview(userNickName)
         
+        timeLable = UILabel.init()
+        timeLable.textColor = UIColor.gray
+        timeLable.font = UIFont.systemFont(ofSize: 10)
+        timeLable.textAlignment = .left
+        self.contentView.addSubview(timeLable)
+        
         showImageView = UIImageView.init()
-        showImageView.backgroundColor = UIColor.blue
+        showImageView.contentMode = .scaleAspectFill
+        showImageView.layer.masksToBounds = true
         self.contentView.addSubview(showImageView)
         
         
@@ -54,7 +65,14 @@ class StreetListCell: UITableViewCell {
             make.top.equalTo(self).offset(10)
             make.left.equalTo(userImageView.snp.right).offset(10)
             make.right.equalTo(self).offset(-10)
-            make.height.equalTo(40)
+            make.height.equalTo(20)
+        }
+        
+        timeLable.snp.makeConstraints { (make) in
+            make.top.equalTo(self).offset(30)
+            make.left.equalTo(userImageView.snp.right).offset(10)
+            make.right.equalTo(self).offset(-10)
+            make.height.equalTo(20)
         }
         
         showImageView.snp.makeConstraints { (make) in
@@ -63,6 +81,18 @@ class StreetListCell: UITableViewCell {
             make.top.equalTo(userImageView.snp.bottom).offset(10)
             make.bottom.equalTo(self).offset(-10)
         }
+        
+    }
+    
+    func loadCellWithModel(model:StreetModel) {
+        
+        let avatarUrl = URL(string:model.avatar)
+        let showUrl = URL(string:model.pict_url.src)
+        userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl!))
+        showImageView.kf.setImage(with: ImageResource.init(downloadURL:showUrl!))
+        
+        userNickName.text = model.nick
+        timeLable.text = model.publish_time
     }
     
     override func awakeFromNib() {

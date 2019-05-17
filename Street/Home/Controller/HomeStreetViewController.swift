@@ -12,7 +12,7 @@ import MJRefresh
 class HomeStreetViewController: STBaseViewController {
 
     var headerView = UIView()
-    var listDataArray = NSMutableArray()
+    var listDataArray = [StreetModel]()
     
     //底部上拉加载
     let bottom_footer = MJRefreshAutoNormalFooter()
@@ -49,6 +49,7 @@ class HomeStreetViewController: STBaseViewController {
         })
 
         self.getListData()
+        
     }
 
     //获取头部数据
@@ -60,26 +61,26 @@ class HomeStreetViewController: STBaseViewController {
     
     func getListData()  {
         
-        listDataArray.removeAllObjects()
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
+    
+        NetWorkTool.shareNetworkTool.getData {
+    
+//            self.listDataArray.removeAllObjects()
+            self.listDataArray = $0
+            self.showTableView.reloadData()
+            
+            self.showTableView.mj_header.endRefreshing()
+
+        }
         
-        //延迟，模拟网络请求
-        Thread.sleep(forTimeInterval: 1)
-        showTableView.reloadData()
-        showTableView.mj_header.endRefreshing()
     }
     
     @objc func getMoreListData()  {
         
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
-        listDataArray.add(1)
+//        listDataArray.add(1)
+//        listDataArray.add(1)
+//        listDataArray.add(1)
+//        listDataArray.add(1)
+//        listDataArray.add(1)
         
         //延迟，模拟网络请求
         Thread.sleep(forTimeInterval: 1)
@@ -96,28 +97,53 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        
+        var tempModel = StreetModel()
+        tempModel = self.listDataArray[indexPath.row]
+        if Int(tempModel.model) == 1 {
+            return 180
+        }
+        else {
+            return 300
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellID = NSStringFromClass(StreetListCell.self)
+        var tempModel = StreetModel()
+        tempModel = self.listDataArray[indexPath.row]
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? StreetListCell
-        if cell == nil {
-            cell = StreetListCell.init(style: .default, reuseIdentifier: cellID)
+        if Int(tempModel.model) == 1 {
+            
+            let cellID = NSStringFromClass(StreetBannerCell.self)
+            
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? StreetBannerCell
+            if cell == nil {
+                cell = StreetBannerCell.init(style: .default, reuseIdentifier: cellID)
+            }
+            
+            cell?.loadCellWithModel(model: tempModel)
+            
+            cell?.selectionStyle = .none
+            
+            return cell!
         }
-        
-        let  random1: CGFloat = CGFloat(arc4random()%255)/255
-        let  random2: CGFloat = CGFloat(arc4random()%255)/255
-        let  random3: CGFloat = CGFloat(arc4random()%255)/255
-        
-        cell?.userImageView.backgroundColor = UIColor.init(red: random1, green: random2, blue: random3, alpha: 1)
-        cell?.showImageView.backgroundColor = UIColor.init(red: random1, green: random2, blue: random3, alpha: 1)
-        cell?.userNickName.text = "昵称是\(indexPath.row)"
-        cell?.selectionStyle = .none
-        
-        return cell!
+        else {
+            
+            let cellID = NSStringFromClass(StreetListCell.self)
+            
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? StreetListCell
+            if cell == nil {
+                cell = StreetListCell.init(style: .default, reuseIdentifier: cellID)
+            }
+            
+            cell?.loadCellWithModel(model: tempModel)
+            
+            cell?.selectionStyle = .none
+            
+            return cell!
+        }
+    
     }
     
     

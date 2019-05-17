@@ -9,6 +9,10 @@ pod 'SnapKit'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'MJRefresh'
+pod 'SVProgressHUD'
+pod 'HandyJSON'
+pod 'Kingfisher'
+pod 'SDWebImage'
 
   # Pods for Street
 

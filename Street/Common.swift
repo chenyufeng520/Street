@@ -8,6 +8,10 @@
 
 import UIKit
 
+/// 服务器地址
+let BASE_URL = "http://47.96.237.239:8080" //测试环境
+//let BASE_URL = "https://api.xi5jie.com"    //正式环境
+
 /// 屏幕的宽
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 /// 屏幕的高
