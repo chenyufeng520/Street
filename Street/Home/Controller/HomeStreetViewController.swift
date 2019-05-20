@@ -11,7 +11,7 @@ import MJRefresh
 
 class HomeStreetViewController: STBaseViewController {
 
-    var headerView = UIView()
+    var headerView = StreetHeaderView()
     var listDataArray = [StreetModel]()
     
     //底部上拉加载
@@ -19,7 +19,7 @@ class HomeStreetViewController: STBaseViewController {
     
     lazy var showTableView:UITableView = {
         
-        let table = UITableView.init(frame: .init(x: 0, y: 64, width: SCREEN_WIDTH, height:SCREEN_HEIGHT - 64 - 49))
+        let table = UITableView.init(frame: .init(x: 0, y: kNavigationHeight, width: SCREEN_WIDTH, height:SCREEN_HEIGHT - kNavigationHeight - kTabBarHeight))
         table.delegate = self
         table.dataSource = self
         table.backgroundColor = UIColor.white
@@ -35,7 +35,7 @@ class HomeStreetViewController: STBaseViewController {
         super.viewDidLoad()
         self.view.addSubview(showTableView)
         
-        headerView = UIView.init(frame: .init(x: 0, y: 0, width: SCREEN_WIDTH, height: 100))
+        headerView = StreetHeaderView.init(frame: .init(x: 0, y: 0, width: SCREEN_WIDTH, height: 84))
         headerView.backgroundColor = UIColor.lightGray
         showTableView.tableHeaderView = headerView
         
@@ -75,12 +75,6 @@ class HomeStreetViewController: STBaseViewController {
     }
     
     @objc func getMoreListData()  {
-        
-//        listDataArray.add(1)
-//        listDataArray.add(1)
-//        listDataArray.add(1)
-//        listDataArray.add(1)
-//        listDataArray.add(1)
         
         //延迟，模拟网络请求
         Thread.sleep(forTimeInterval: 1)

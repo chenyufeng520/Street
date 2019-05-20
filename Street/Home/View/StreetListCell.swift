@@ -88,7 +88,7 @@ class StreetListCell: UITableViewCell {
         
         let avatarUrl = URL(string:model.avatar)
         let showUrl = URL(string:model.pict_url.src)
-        userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl!))
+//        userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl!))
         showImageView.kf.setImage(with: ImageResource.init(downloadURL:showUrl!))
         
         userNickName.text = model.nick
