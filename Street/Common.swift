@@ -12,6 +12,8 @@ import UIKit
 let BASE_URL = "http://47.96.237.239:8080" //测试环境
 //let BASE_URL = "https://api.xi5jie.com"    //正式环境
 
+let HostH5BaseURLPath = "http://47.96.237.239:8082";//测试环境（H5）
+//let HostH5BaseURLPath = "https://appview.xi5jie.com";//正式环境H5）
 /// 屏幕的宽
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 /// 屏幕的高
@@ -22,6 +24,12 @@ func kRGBColorFromHex(rgbValue: Int) -> (UIColor) {
     
   return UIColor(red: ((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0,green: ((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0, blue: ((CGFloat)(rgbValue & 0xFF)) / 255.0, alpha: 1.0)
     
+}
+
+//获取随机色
+func KRandomColor() ->(UIColor){
+    
+    return UIColor(red: CGFloat(Float(arc4random()%255)/255.0), green: CGFloat(Float(arc4random()%255)/255.0), blue: CGFloat(Float(arc4random()%255)/255.0), alpha: 1)
 }
 
 //判断是否是iPhone

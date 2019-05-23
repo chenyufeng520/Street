@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol StreetHeaderSelectDelegate {
+    func streetHeaderSelectWithCurrentIndex(index:NSInteger)
+}
+
 class StreetHeaderView: UIView {
+    
+    var delegate:StreetHeaderSelectDelegate?
     
     let Identifier = "cell";
     
@@ -18,13 +24,12 @@ class StreetHeaderView: UIView {
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize.init(width: 100, height: 64)
         
         let collection = UICollectionView.init(frame:CGRect.init(x: 0, y: 10, width: self.frame.width, height: 64), collectionViewLayout: layout)
-        collection.backgroundColor = UIColor.white
+        collection.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
         collection.delegate = self
         collection.dataSource = self
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifier)
+        collection.register(StreetCollectionViewCell.self, forCellWithReuseIdentifier: Identifier)
         collection.showsHorizontalScrollIndicator = false
         return collection
     }()
@@ -42,7 +47,7 @@ class StreetHeaderView: UIView {
 }
 
 
-extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource {
+extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -51,15 +56,25 @@ extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath)
-        cell.backgroundColor = UIColor.gray
-      
+        let cell:StreetCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath) as! StreetCollectionViewCell
+        cell.showImageView.backgroundColor = KRandomColor()
+        cell.titleLable.text = "标题\(indexPath.row)"
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("点击了")
+        delegate?.streetHeaderSelectWithCurrentIndex(index: indexPath.row)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize.init(width: 100, height: 64)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 10)
+    }
 }

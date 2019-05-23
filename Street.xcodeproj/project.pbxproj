@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		21F505BC146A67E67B93469E /* Pods_Street.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77D1812532B010885EED5EA /* Pods_Street.framework */; };
 		24EA50BAFCBFD82AE0E4ADE8 /* Pods_StreetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DA7A859F549227E2DAF806 /* Pods_StreetUITests.framework */; };
+		711E7F992293997600DF4CBF /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E7F982293997600DF4CBF /* MineHeaderView.swift */; };
+		711E7F9B22939FDF00DF4CBF /* StreetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E7F9A22939FDF00DF4CBF /* StreetCollectionViewCell.swift */; };
 		711EA524228A600000118C6F /* STBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA523228A600000118C6F /* STBaseViewController.swift */; };
 		711EA526228A60D700118C6F /* STNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA525228A60D700118C6F /* STNavigationController.swift */; };
 		711EA528228A683D00118C6F /* HomeStreetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA527228A683D00118C6F /* HomeStreetViewController.swift */; };
@@ -19,6 +21,7 @@
 		711EA534228A6FC900118C6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA533228A6FC900118C6F /* Common.swift */; };
 		71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234E38228EC17000632131 /* StreetBannerCell.swift */; };
 		71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABB2292B88600AE638D /* StreetHeaderView.swift */; };
+		71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABD2292C90600AE638D /* STWebViewController.swift */; };
 		716067E5228BC49A00945547 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E4228BC49A00945547 /* NetWorkTool.swift */; };
 		716067E7228C176F00945547 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E6228C176F00945547 /* BaseModel.swift */; };
 		716067E9228C19D500945547 /* StreetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E8228C19D500945547 /* StreetModel.swift */; };
@@ -56,6 +59,8 @@
 		5D86380E46CD32CF0F940344 /* Pods-Street.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street.release.xcconfig"; path = "Target Support Files/Pods-Street/Pods-Street.release.xcconfig"; sourceTree = "<group>"; };
 		6B95CCCCEB24C897A38AE4D8 /* Pods-StreetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreetUITests.debug.xcconfig"; path = "Target Support Files/Pods-StreetUITests/Pods-StreetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F04CF9B63A2336172B9FFB8 /* Pods-StreetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreetTests.debug.xcconfig"; path = "Target Support Files/Pods-StreetTests/Pods-StreetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		711E7F982293997600DF4CBF /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		711E7F9A22939FDF00DF4CBF /* StreetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCollectionViewCell.swift; sourceTree = "<group>"; };
 		711EA523228A600000118C6F /* STBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STBaseViewController.swift; sourceTree = "<group>"; };
 		711EA525228A60D700118C6F /* STNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STNavigationController.swift; sourceTree = "<group>"; };
 		711EA527228A683D00118C6F /* HomeStreetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStreetViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		711EA533228A6FC900118C6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		71234E38228EC17000632131 /* StreetBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetBannerCell.swift; sourceTree = "<group>"; };
 		71236ABB2292B88600AE638D /* StreetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetHeaderView.swift; sourceTree = "<group>"; };
+		71236ABD2292C90600AE638D /* STWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STWebViewController.swift; sourceTree = "<group>"; };
 		716067E4228BC49A00945547 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		716067E6228C176F00945547 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		716067E8228C19D500945547 /* StreetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetModel.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		711EA50E228A5E0400118C6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				711E7F982293997600DF4CBF /* MineHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				711EA52D228A688100118C6F /* ShopViewController.swift */,
+				71236ABD2292C90600AE638D /* STWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 				71678F8A228AE3C30003934D /* StreetListCell.swift */,
 				71234E38228EC17000632131 /* StreetBannerCell.swift */,
 				71236ABB2292B88600AE638D /* StreetHeaderView.swift */,
+				711E7F9A22939FDF00DF4CBF /* StreetCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,6 +652,7 @@
 				71D865EF228992750074B051 /* AppDelegate.swift in Sources */,
 				711EA52E228A688100118C6F /* ShopViewController.swift in Sources */,
 				711EA528228A683D00118C6F /* HomeStreetViewController.swift in Sources */,
+				711E7F9B22939FDF00DF4CBF /* StreetCollectionViewCell.swift in Sources */,
 				71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */,
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
@@ -651,9 +661,11 @@
 				711EA524228A600000118C6F /* STBaseViewController.swift in Sources */,
 				716067E7228C176F00945547 /* BaseModel.swift in Sources */,
 				71D8661D228996090074B051 /* STTabBarViewController.swift in Sources */,
+				711E7F992293997600DF4CBF /* MineHeaderView.swift in Sources */,
 				71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */,
 				71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */,
 				711EA534228A6FC900118C6F /* Common.swift in Sources */,
+				71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */,
 				711EA530228A689500118C6F /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

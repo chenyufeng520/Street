@@ -9,8 +9,8 @@
 import UIKit
 import MJRefresh
 
-class HomeStreetViewController: STBaseViewController {
-
+class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate {
+    
     var headerView = StreetHeaderView()
     var listDataArray = [StreetModel]()
     
@@ -22,7 +22,7 @@ class HomeStreetViewController: STBaseViewController {
         let table = UITableView.init(frame: .init(x: 0, y: kNavigationHeight, width: SCREEN_WIDTH, height:SCREEN_HEIGHT - kNavigationHeight - kTabBarHeight))
         table.delegate = self
         table.dataSource = self
-        table.backgroundColor = UIColor.white
+        table.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
         table.showsVerticalScrollIndicator = false
         if #available(iOS 11.0, *) {
             table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
@@ -31,47 +31,44 @@ class HomeStreetViewController: STBaseViewController {
     }()
     
     override func viewDidLoad() {
-    
+        
         super.viewDidLoad()
         self.view.addSubview(showTableView)
         
         headerView = StreetHeaderView.init(frame: .init(x: 0, y: 0, width: SCREEN_WIDTH, height: 84))
-        headerView.backgroundColor = UIColor.lightGray
+        headerView.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
+        headerView.delegate = self
         showTableView.tableHeaderView = headerView
         
         
         showTableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             self.getListData()
         })
-
+        
         showTableView.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
             self.getMoreListData()
         })
-
+        
         self.getListData()
         
     }
-
-    //获取头部数据
+    
+    //MARK: - 网络请求
     func getHeaderData() {
         
         Thread.sleep(forTimeInterval: 1)
-        
     }
     
     func getListData()  {
         
-    
         NetWorkTool.shareNetworkTool.getData {
-    
-//            self.listDataArray.removeAllObjects()
+            
+            //            self.listDataArray.removeAllObjects()
             self.listDataArray = $0
             self.showTableView.reloadData()
             
             self.showTableView.mj_header.endRefreshing()
-
         }
-        
     }
     
     @objc func getMoreListData()  {
@@ -80,6 +77,11 @@ class HomeStreetViewController: STBaseViewController {
         Thread.sleep(forTimeInterval: 1)
         showTableView.reloadData()
         showTableView.mj_footer.endRefreshing()
+    }
+    
+    //MARK: - StreetHeaderSelectDelegate代理
+    func streetHeaderSelectWithCurrentIndex(index: NSInteger) {
+        print("选中了第\(index)行")
     }
     
 }
@@ -137,7 +139,7 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
             
             return cell!
         }
-    
+        
     }
     
     
