@@ -11,10 +11,30 @@ import Alamofire
 import SVProgressHUD
 import SwiftyJSON
 
+enum methodType {
+    case get
+    case post
+}
+
 class NetWorkTool: NSObject {
     
     /// 单例
     static let shareNetworkTool = NetWorkTool()
+    
+    func NetWorkToolRequest(method: methodType, url: String, parameters: [String:Any]?, _ completionHandler: @escaping (_ result: Any?) -> ()){
+        
+        
+        let headers:HTTPHeaders = [
+           "Accept-Language" : "zh-Hans-US;q=1, en;q=0.9"
+        ]
+        
+        Alamofire.request(url, method: method == methodType.get ? .get : .post ,parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+            
+            let dict = JSON(response.result.value!)
+            completionHandler(dict)
+        }
+    }
+    
     
     //暂时写死
     func getData(_ completionHandler: @escaping (_ listArray: [StreetModel]) -> ()) {
@@ -37,20 +57,20 @@ class NetWorkTool: NSObject {
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
             if(response.error == nil){
                 
-                print(response.result.value)
+                print(response.result.value!)
                 
-                let dict = JSON(response.result.value)
+                let dict = JSON(response.result.value!)
                 let code = dict["code"].intValue
                 
                 if let datas = dict["data"]["pageContent"].arrayObject {
                     var titles = [StreetModel]()
-
+                    
                     titles += datas.compactMap({ StreetModel.deserialize(from: $0 as? Dictionary) })
                     completionHandler(titles)
                 }
                 
-//                guard let datas = dict["data"]["pageContent"].array else { return }
-//                completionHandler(datas.compactMap({ StreetModel.deserialize(from: $0["content"].string) }))
+                //                guard let datas = dict["data"]["pageContent"].array else { return }
+                //                completionHandler(datas.compactMap({ StreetModel.deserialize(from: $0["content"].string) }))
                 
                 if code == 200 {
                     SVProgressHUD.showInfo(withStatus: "请求成功")
