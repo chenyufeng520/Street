@@ -14,6 +14,7 @@ class StreetModel: BaseModel {
     var nick = String()
     var publish_time = String()
     var model = String()
+    var lastid = String()
     var pic = StreetPicModel()
     var pict_url = StreetPicModel()
 }

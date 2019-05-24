@@ -12,7 +12,7 @@ pod 'MJRefresh'
 pod 'SVProgressHUD'
 pod 'HandyJSON'
 pod 'Kingfisher'
-pod 'SDWebImage'
+pod 'AFNetworking'
 
   # Pods for Street
 

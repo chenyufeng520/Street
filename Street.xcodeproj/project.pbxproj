@@ -22,6 +22,10 @@
 		71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234E38228EC17000632131 /* StreetBannerCell.swift */; };
 		71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABB2292B88600AE638D /* StreetHeaderView.swift */; };
 		71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABD2292C90600AE638D /* STWebViewController.swift */; };
+		712D1AEC2297ECF500783FDD /* LTLSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AEB2297ECF500783FDD /* LTLSNetworkManager.m */; };
+		712D1AEF2297EF9D00783FDD /* LTLSSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AEE2297EF9D00783FDD /* LTLSSettingManager.m */; };
+		712D1AF22297F1D200783FDD /* KeychainUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AF02297F1D200783FDD /* KeychainUUID.m */; };
+		712D1AF52297F24200783FDD /* NSString+LTLSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AF42297F24100783FDD /* NSString+LTLSExtension.m */; };
 		716067E5228BC49A00945547 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E4228BC49A00945547 /* NetWorkTool.swift */; };
 		716067E7228C176F00945547 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E6228C176F00945547 /* BaseModel.swift */; };
 		716067E9228C19D500945547 /* StreetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E8228C19D500945547 /* StreetModel.swift */; };
@@ -72,6 +76,15 @@
 		71234E38228EC17000632131 /* StreetBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetBannerCell.swift; sourceTree = "<group>"; };
 		71236ABB2292B88600AE638D /* StreetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetHeaderView.swift; sourceTree = "<group>"; };
 		71236ABD2292C90600AE638D /* STWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STWebViewController.swift; sourceTree = "<group>"; };
+		712D1AE92297ECF400783FDD /* Street-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Street-Bridging-Header.h"; sourceTree = "<group>"; };
+		712D1AEA2297ECF500783FDD /* LTLSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLSNetworkManager.h; sourceTree = "<group>"; };
+		712D1AEB2297ECF500783FDD /* LTLSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLSNetworkManager.m; sourceTree = "<group>"; };
+		712D1AED2297EF9C00783FDD /* LTLSSettingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLSSettingManager.h; sourceTree = "<group>"; };
+		712D1AEE2297EF9D00783FDD /* LTLSSettingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLSSettingManager.m; sourceTree = "<group>"; };
+		712D1AF02297F1D200783FDD /* KeychainUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainUUID.m; sourceTree = "<group>"; };
+		712D1AF12297F1D200783FDD /* KeychainUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainUUID.h; sourceTree = "<group>"; };
+		712D1AF32297F24100783FDD /* NSString+LTLSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LTLSExtension.h"; sourceTree = "<group>"; };
+		712D1AF42297F24100783FDD /* NSString+LTLSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTLSExtension.m"; sourceTree = "<group>"; };
 		716067E4228BC49A00945547 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		716067E6228C176F00945547 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		716067E8228C19D500945547 /* StreetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetModel.swift; sourceTree = "<group>"; };
@@ -325,6 +338,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		712D1AE62297EAAB00783FDD /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				712D1AEA2297ECF500783FDD /* LTLSNetworkManager.h */,
+				712D1AEB2297ECF500783FDD /* LTLSNetworkManager.m */,
+				712D1AED2297EF9C00783FDD /* LTLSSettingManager.h */,
+				712D1AEE2297EF9D00783FDD /* LTLSSettingManager.m */,
+				712D1AF12297F1D200783FDD /* KeychainUUID.h */,
+				712D1AF02297F1D200783FDD /* KeychainUUID.m */,
+				712D1AF32297F24100783FDD /* NSString+LTLSExtension.h */,
+				712D1AF42297F24100783FDD /* NSString+LTLSExtension.m */,
+				712D1AE92297ECF400783FDD /* Street-Bridging-Header.h */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		71D865E2228992750074B051 = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +386,7 @@
 				711EA50F228A5E1F00118C6F /* Shop */,
 				711EA50B228A5DFF00118C6F /* Mine */,
 				71D865EE228992750074B051 /* AppDelegate.swift */,
+				712D1AE62297EAAB00783FDD /* NetworkManager */,
 				711EA533228A6FC900118C6F /* Common.swift */,
 				716067E4228BC49A00945547 /* NetWorkTool.swift */,
 				71D865F5228992750074B051 /* Assets.xcassets */,
@@ -480,6 +510,7 @@
 				TargetAttributes = {
 					71D865EA228992750074B051 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					71D865FE228992750074B051 = {
 						CreatedOnToolsVersion = 10.1;
@@ -614,11 +645,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Street/Pods-Street-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -627,11 +658,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -649,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716067E5228BC49A00945547 /* NetWorkTool.swift in Sources */,
+				712D1AEF2297EF9D00783FDD /* LTLSSettingManager.m in Sources */,
 				71D865EF228992750074B051 /* AppDelegate.swift in Sources */,
 				711EA52E228A688100118C6F /* ShopViewController.swift in Sources */,
 				711EA528228A683D00118C6F /* HomeStreetViewController.swift in Sources */,
@@ -657,12 +689,15 @@
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
 				716067E9228C19D500945547 /* StreetModel.swift in Sources */,
+				712D1AF22297F1D200783FDD /* KeychainUUID.m in Sources */,
 				711EA52A228A685F00118C6F /* AttentionViewController.swift in Sources */,
 				711EA524228A600000118C6F /* STBaseViewController.swift in Sources */,
 				716067E7228C176F00945547 /* BaseModel.swift in Sources */,
 				71D8661D228996090074B051 /* STTabBarViewController.swift in Sources */,
 				711E7F992293997600DF4CBF /* MineHeaderView.swift in Sources */,
+				712D1AF52297F24200783FDD /* NSString+LTLSExtension.m in Sources */,
 				71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */,
+				712D1AEC2297ECF500783FDD /* LTLSNetworkManager.m in Sources */,
 				71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */,
 				711EA534228A6FC900118C6F /* Common.swift in Sources */,
 				71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */,
@@ -843,6 +878,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L2245S25T;
 				INFOPLIST_FILE = Street/Info.plist;
@@ -853,6 +889,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = inmyshow.Street;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Street/NetworkManager/Street-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -864,6 +902,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6L2245S25T;
 				INFOPLIST_FILE = Street/Info.plist;
@@ -874,6 +913,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = inmyshow.Street;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Street/NetworkManager/Street-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -39,7 +39,7 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate 
         headerView.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
         headerView.delegate = self
         showTableView.tableHeaderView = headerView
-        
+        showTableView.tableFooterView = UIView()
         
         showTableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             self.getListData()
@@ -61,14 +61,31 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate 
     
     func getListData()  {
         
-        NetWorkTool.shareNetworkTool.getData {
-            
-            //            self.listDataArray.removeAllObjects()
-            self.listDataArray = $0
-            self.showTableView.reloadData()
-            
-            self.showTableView.mj_header.endRefreshing()
+        var params = [String : Any]()
+        params["jqid"] = "0"
+        params["pageNo"] = "1"
+        params["dir"] = "0"
+        params["jqid"] = "0"
+        if self.listDataArray.count > 0 {
+            let model:StreetModel = self.listDataArray.first!
+            params["lastid"] = "\(model.lastid)"
         }
+        
+        
+        LTLSNetworkManager.shared()?.get("/community/articleStar", parameters: params, success: { (task, responseObject) in
+            
+//            let dic = responseObject as! Dictionary<AnyHashable, Any>
+//            let dataDic = dic["data"]
+//            let array:Array = dataDic!["pageContent"]
+            
+            
+//            let dic =  responseObject!["data"]["pageContent"] as! Dictionary
+            
+            
+        }, failure: { (task, responseObject, error) in
+            
+            print(error as Any);
+        })
     }
     
     @objc func getMoreListData()  {
