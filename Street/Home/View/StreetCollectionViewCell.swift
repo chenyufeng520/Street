@@ -33,10 +33,10 @@ class StreetCollectionViewCell: UICollectionViewCell {
         self.addSubview(showImageView)
         
         titleLable = UILabel.init()
-        titleLable.frame = CGRect.init(x: 0, y: self.frame.height - 40, width: self.frame.width, height: 40)
+        titleLable.frame = CGRect.init(x: 0, y: self.frame.height - 30, width: self.frame.width, height: 30)
         titleLable.textAlignment = .center
         titleLable.textColor = UIColor.white
-        titleLable.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLable.font = UIFont.boldSystemFont(ofSize: 13)
         self.addSubview(titleLable)
         
     }

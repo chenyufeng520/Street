@@ -30,6 +30,7 @@
 		716067E7228C176F00945547 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E6228C176F00945547 /* BaseModel.swift */; };
 		716067E9228C19D500945547 /* StreetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E8228C19D500945547 /* StreetModel.swift */; };
 		71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71678F8A228AE3C30003934D /* StreetListCell.swift */; };
+		7188CA67229B922200239118 /* StreetNavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7188CA66229B922200239118 /* StreetNavModel.swift */; };
 		71D865EF228992750074B051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D865EE228992750074B051 /* AppDelegate.swift */; };
 		71D865F4228992750074B051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F2228992750074B051 /* Main.storyboard */; };
 		71D865F6228992750074B051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F5228992750074B051 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		716067E6228C176F00945547 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		716067E8228C19D500945547 /* StreetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetModel.swift; sourceTree = "<group>"; };
 		71678F8A228AE3C30003934D /* StreetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetListCell.swift; sourceTree = "<group>"; };
+		7188CA66229B922200239118 /* StreetNavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetNavModel.swift; sourceTree = "<group>"; };
 		71D865EB228992750074B051 /* Street.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Street.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D865EE228992750074B051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D865F3228992750074B051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				716067E6228C176F00945547 /* BaseModel.swift */,
 				716067E8228C19D500945547 /* StreetModel.swift */,
+				7188CA66229B922200239118 /* StreetNavModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */,
 				712D1AEC2297ECF500783FDD /* LTLSNetworkManager.m in Sources */,
 				71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */,
+				7188CA67229B922200239118 /* StreetNavModel.swift in Sources */,
 				711EA534228A6FC900118C6F /* Common.swift in Sources */,
 				71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */,
 				711EA530228A689500118C6F /* MineViewController.swift in Sources */,

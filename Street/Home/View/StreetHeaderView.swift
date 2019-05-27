@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol StreetHeaderSelectDelegate {
-    func streetHeaderSelectWithCurrentIndex(index:NSInteger)
+    func streetHeaderSelectWithCurrentIndex(index:NSInteger, streetId:String)
 }
 
 class StreetHeaderView: UIView {
     
     var delegate:StreetHeaderSelectDelegate?
+    var titleArray = [StreetNavModel]()
+    
     
     let Identifier = "cell";
     
@@ -38,6 +41,11 @@ class StreetHeaderView: UIView {
     override init(frame: CGRect) {
        
         super.init(frame: frame)
+    }
+    
+    init(frame: CGRect, titleArray:[StreetNavModel]) {
+        super.init(frame:frame) 
+        self.titleArray = titleArray
         self.addSubview(collectionView)
     }
     
@@ -51,21 +59,24 @@ extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return self.titleArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell:StreetCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath) as! StreetCollectionViewCell
-        cell.showImageView.backgroundColor = KRandomColor()
-        cell.titleLable.text = "标题\(indexPath.row)"
+        
+        let model:StreetNavModel = self.titleArray[indexPath.row]
+        cell.showImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.pic.src)!))
+        cell.titleLable.text = model.title
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        delegate?.streetHeaderSelectWithCurrentIndex(index: indexPath.row)
+        let model:StreetNavModel = self.titleArray[indexPath.row]
+        delegate?.streetHeaderSelectWithCurrentIndex(index: indexPath.row,streetId: model.jqid)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
