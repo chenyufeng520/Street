@@ -9,8 +9,8 @@
 import UIKit
 import MJRefresh
 
-class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate {
-    
+class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate,StreetListSelectDelegate {
+
     //MARK: - 属性
     var currentPageNo:Int = 1
     var nextPageNo:Int = -1
@@ -21,8 +21,9 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate 
         let table = UITableView.init(frame: .init(x: 0, y: kNavigationHeight, width: SCREEN_WIDTH, height:SCREEN_HEIGHT - kNavigationHeight - kTabBarHeight))
         table.delegate = self
         table.dataSource = self
-        table.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
+        table.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         table.showsVerticalScrollIndicator = false
+        table.separatorStyle = .none
         if #available(iOS 11.0, *) {
             table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         }
@@ -58,14 +59,9 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate 
     func configHeaderNavUI(titleArray:[StreetNavModel]) {
         
         let headerView = StreetHeaderView.init(frame: .init(x: 0, y: 0, width: SCREEN_WIDTH, height: 84), titleArray: titleArray)
-        headerView.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
+        headerView.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         headerView.delegate = self
         showTableView.tableHeaderView = headerView
-    }
-    
-    //MARK: - StreetHeaderSelectDelegate代理
-    func streetHeaderSelectWithCurrentIndex(index: NSInteger, streetId: String) {
-        print("点击了第\(index)行,街区id为" + streetId)
     }
 }
 
@@ -84,26 +80,23 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
             return 180
         }
         else {
-            return 300
+            return 310
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var tempModel = StreetModel()
-        tempModel = self.listDataArray[indexPath.row]
+        let tempModel:StreetModel = self.listDataArray[indexPath.row]
         
         if Int(tempModel.model) == 1 {
             
             let cellID = NSStringFromClass(StreetBannerCell.self)
-            
             var cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? StreetBannerCell
             if cell == nil {
                 cell = StreetBannerCell.init(style: .default, reuseIdentifier: cellID)
             }
             
             cell?.loadCellWithModel(model: tempModel)
-            
             cell?.selectionStyle = .none
             
             return cell!
@@ -111,26 +104,30 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
         else {
             
             let cellID = NSStringFromClass(StreetListCell.self)
-            
             var cell = tableView.dequeueReusableCell(withIdentifier: cellID) as? StreetListCell
             if cell == nil {
                 cell = StreetListCell.init(style: .default, reuseIdentifier: cellID)
             }
             
+            cell?.tag = indexPath.row
+            cell?.delegate = self
             cell?.loadCellWithModel(model: tempModel)
-            
             cell?.selectionStyle = .none
             
             return cell!
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("选中了第\(indexPath.row)行")
+        let tempModel:StreetModel = self.listDataArray[indexPath.row]
+        if Int(tempModel.model) == 1 {
+            print("选中了第\(indexPath.row)行====广告详情")
+        }
+        else {
+            print("选中了第\(indexPath.row)行====文章详情 ")
+        }
     }
-    
 }
 
 
@@ -153,11 +150,19 @@ extension HomeStreetViewController {
         params["pageNo"] = "\(self.currentPageNo)"
         params["dir"] = isRefresh == true ? "0" : "1"
         params["jqid"] = "0"
-        if self.listDataArray.count > 0 {
-            let model:StreetModel = self.listDataArray.first!
-            params["lastid"] = "\(model.lastid)"
+        if isRefresh == true {
+            if self.listDataArray.count > 0 {
+                let model:StreetModel = self.listDataArray.first!
+                params["lastid"] = "\(model.lastid)"
+            }
         }
-        
+        else {
+            if self.listDataArray.count > 0 {
+                let model:StreetModel = self.listDataArray.last!
+                params["lastid"] = "\(model.lastid)"
+            }
+        }
+
         LTLSNetworkManager.shared()?.get("/community/articleStar", parameters: params, success: { (task, responseObject) in
             
             objc_sync_enter(self)
@@ -231,5 +236,23 @@ extension HomeStreetViewController {
             
             print(error as Any);
         })
+    }
+}
+
+//MARK: - 代理
+extension HomeStreetViewController {
+    
+    //MARK: - StreetHeaderSelectDelegate代理
+    func streetHeaderSelectWithCurrentIndex(index: NSInteger, streetId: String) {
+        print("点击了第\(index)行,街区id为" + streetId)
+    }
+    
+    //MARK: - StreetListSelectDelegate代理
+    func StreetListSelectCurrentUserImage(index: NSInteger, uid: String) {
+        print("点击了第\(index)行,用户id为" + uid)
+    }
+    
+    func StreetListSelectCurrentStreet(index: NSInteger, streetId: String) {
+        print("点击了第\(index)行,街区id为" + streetId)
     }
 }

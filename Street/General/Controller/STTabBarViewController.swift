@@ -14,8 +14,8 @@ class STTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         let tabbar = UITabBar.appearance()
-        tabbar.tintColor = kRGBColorFromHex(rgbValue: 0x262626)
-        tabbar.unselectedItemTintColor = kRGBColorFromHex(rgbValue: 0xC0C0C0)
+        tabbar.tintColor = UIColor.colorFromHex(rgbValue: 0x262626)
+        tabbar.unselectedItemTintColor = UIColor.colorFromHex(rgbValue: 0xC0C0C0)
         self.addChildViewControllers()
         
     }

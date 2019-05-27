@@ -18,7 +18,6 @@ class StreetHeaderView: UIView {
     var delegate:StreetHeaderSelectDelegate?
     var titleArray = [StreetNavModel]()
     
-    
     let Identifier = "cell";
     
     lazy var collectionView : UICollectionView = {
@@ -29,7 +28,7 @@ class StreetHeaderView: UIView {
         layout.scrollDirection = .horizontal
         
         let collection = UICollectionView.init(frame:CGRect.init(x: 0, y: 10, width: self.frame.width, height: 64), collectionViewLayout: layout)
-        collection.backgroundColor = kRGBColorFromHex(rgbValue: 0xFAF8F7)
+        collection.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         collection.delegate = self
         collection.dataSource = self
         collection.register(StreetCollectionViewCell.self, forCellWithReuseIdentifier: Identifier)

@@ -19,19 +19,6 @@ let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 /// 屏幕的高
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
-//rbg转UIColor(16进制)
-func kRGBColorFromHex(rgbValue: Int) -> (UIColor) {
-    
-  return UIColor(red: ((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0,green: ((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0, blue: ((CGFloat)(rgbValue & 0xFF)) / 255.0, alpha: 1.0)
-    
-}
-
-//获取随机色
-func KRandomColor() ->(UIColor){
-    
-    return UIColor(red: CGFloat(Float(arc4random()%255)/255.0), green: CGFloat(Float(arc4random()%255)/255.0), blue: CGFloat(Float(arc4random()%255)/255.0), alpha: 1)
-}
-
 //判断是否是iPhone
 let isPhone = Bool(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone)
 

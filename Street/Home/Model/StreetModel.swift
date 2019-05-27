@@ -10,13 +10,31 @@ import UIKit
 
 class StreetModel: BaseModel {
 
-    var avatar = String()
-    var nick = String()
-    var publish_time = String()
     var model = String()
+    var add_time = String()
+    var avatar = String()
+    var banner = [StreetPicModel]()
+    var comment_num = String()
+    var desc = String()
+    var favorite_num = String()
+    var id = String()
+    var idtype = String()
+    var is_kol = String()
+    var is_like = String()
+    var is_recommend = String()
+    var jiequ = StreetJiequModel()
+    var kol_intr = String()
+    var kol_pic = String()
     var lastid = String()
-    var pic = StreetPicModel()
+    var like_num = String()
+    var nick = String()
     var pict_url = StreetPicModel()
+    var pic = StreetPicModel()
+    var publish_time = String()
+    var title = String()
+    var type = String()
+    var uid = String()
+    
 }
 
 
@@ -26,4 +44,10 @@ class StreetPicModel: BaseModel {
     var w = String()
     var src = String()
     var rgb = String()
+}
+
+class StreetJiequModel: BaseModel {
+    
+    var jqid = String()
+    var jqname = String()
 }

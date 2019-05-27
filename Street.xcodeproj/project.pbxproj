@@ -31,6 +31,7 @@
 		716067E9228C19D500945547 /* StreetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E8228C19D500945547 /* StreetModel.swift */; };
 		71678F8B228AE3C30003934D /* StreetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71678F8A228AE3C30003934D /* StreetListCell.swift */; };
 		7188CA67229B922200239118 /* StreetNavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7188CA66229B922200239118 /* StreetNavModel.swift */; };
+		7188CA6B229BC8B600239118 /* UIColor+RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7188CA6A229BC8B600239118 /* UIColor+RGBColor.swift */; };
 		71D865EF228992750074B051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D865EE228992750074B051 /* AppDelegate.swift */; };
 		71D865F4228992750074B051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F2228992750074B051 /* Main.storyboard */; };
 		71D865F6228992750074B051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D865F5228992750074B051 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		716067E8228C19D500945547 /* StreetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetModel.swift; sourceTree = "<group>"; };
 		71678F8A228AE3C30003934D /* StreetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetListCell.swift; sourceTree = "<group>"; };
 		7188CA66229B922200239118 /* StreetNavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetNavModel.swift; sourceTree = "<group>"; };
+		7188CA6A229BC8B600239118 /* UIColor+RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBColor.swift"; sourceTree = "<group>"; };
 		71D865EB228992750074B051 /* Street.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Street.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D865EE228992750074B051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D865F3228992750074B051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		711EA522228A5EFC00118C6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7188CA6A229BC8B600239118 /* UIColor+RGBColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
 				716067E9228C19D500945547 /* StreetModel.swift in Sources */,
+				7188CA6B229BC8B600239118 /* UIColor+RGBColor.swift in Sources */,
 				712D1AF22297F1D200783FDD /* KeychainUUID.m in Sources */,
 				711EA52A228A685F00118C6F /* AttentionViewController.swift in Sources */,
 				711EA524228A600000118C6F /* STBaseViewController.swift in Sources */,
