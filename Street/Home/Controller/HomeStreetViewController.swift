@@ -77,7 +77,7 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
         var tempModel = StreetModel()
         tempModel = self.listDataArray[indexPath.row]
         if Int(tempModel.model) == 1 {
-            return 180
+            return 190
         }
         else {
             return 310

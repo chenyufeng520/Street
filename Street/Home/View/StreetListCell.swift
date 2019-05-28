@@ -56,6 +56,7 @@ class StreetListCell: UITableViewCell {
         userImageView.layer.masksToBounds = true
         userImageView.contentMode = .scaleAspectFill
         userImageView.layer.masksToBounds = true
+        userImageView.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         backView.addSubview(userImageView)
         userImageView.isUserInteractionEnabled = true
         userImageView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(selectCurrentUserImage)))
@@ -159,7 +160,7 @@ class StreetListCell: UITableViewCell {
  
         self.currentModel = model
         if let avatarUrl = URL(string:model.avatar) {
-            userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl))
+            userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl),placeholder:UIImage(named: "header_default"))
         }
         if let showUrl = URL(string:model.pict_url.src) {
             showImageView.kf.setImage(with: ImageResource.init(downloadURL:showUrl))
