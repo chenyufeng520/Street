@@ -55,6 +55,8 @@ extension NoticeListViewController : UITableViewDataSource, UITableViewDelegate 
         if cell == nil {
             cell = NoticeListCell.init(style: .default, reuseIdentifier: noticeListCelliden)
         }
+        cell?.showImageview.backgroundColor = UIColor.randomColor()
+        cell?.timeLable.text = "2019-5-28"
         cell?.selectionStyle = .none
         return cell!
     }

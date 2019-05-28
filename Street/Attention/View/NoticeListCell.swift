@@ -10,6 +10,10 @@ import UIKit
 
 class NoticeListCell: UITableViewCell {
 
+    @IBOutlet weak var userImageview: UIImageView!
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var showImageview: UIImageView!
+    @IBOutlet weak var timeLable: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
