@@ -12,7 +12,7 @@ class STBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        view.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         // Do any additional setup after loading the view.
     }
     

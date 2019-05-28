@@ -143,6 +143,9 @@ extension AttentionViewController :MessageHeaderViewProtocol {
             print("关注列表")
         case .notice:
             print("通知列表")
+            let noticeVC = NoticeListViewController()
+            noticeVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(noticeVC, animated: true)
         }
     }
 

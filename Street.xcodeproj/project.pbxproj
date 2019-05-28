@@ -20,6 +20,9 @@
 		711EA530228A689500118C6F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52F228A689500118C6F /* MineViewController.swift */; };
 		711EA534228A6FC900118C6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA533228A6FC900118C6F /* Common.swift */; };
 		7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963C229D199C0024427A /* MessageHeaderView.swift */; };
+		7122963F229D34010024427A /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963E229D34010024427A /* NoticeListViewController.swift */; };
+		71229642229D369C0024427A /* NoticeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71229640229D369C0024427A /* NoticeListCell.swift */; };
+		71229643229D369C0024427A /* NoticeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71229641229D369C0024427A /* NoticeListCell.xib */; };
 		71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234E38228EC17000632131 /* StreetBannerCell.swift */; };
 		71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABB2292B88600AE638D /* StreetHeaderView.swift */; };
 		71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABD2292C90600AE638D /* STWebViewController.swift */; };
@@ -79,6 +82,9 @@
 		711EA52F228A689500118C6F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		711EA533228A6FC900118C6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7122963C229D199C0024427A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
+		7122963E229D34010024427A /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
+		71229640229D369C0024427A /* NoticeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListCell.swift; sourceTree = "<group>"; };
+		71229641229D369C0024427A /* NoticeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeListCell.xib; sourceTree = "<group>"; };
 		71234E38228EC17000632131 /* StreetBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetBannerCell.swift; sourceTree = "<group>"; };
 		71236ABB2292B88600AE638D /* StreetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetHeaderView.swift; sourceTree = "<group>"; };
 		71236ABD2292C90600AE638D /* STWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STWebViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				711EA529228A685F00118C6F /* AttentionViewController.swift */,
+				7122963E229D34010024427A /* NoticeListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +282,8 @@
 			children = (
 				7188CA6E229C05C500239118 /* MessageListCell.swift */,
 				7122963C229D199C0024427A /* MessageHeaderView.swift */,
+				71229640229D369C0024427A /* NoticeListCell.swift */,
+				71229641229D369C0024427A /* NoticeListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D865F9228992750074B051 /* LaunchScreen.storyboard in Resources */,
+				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
 				71D865F6228992750074B051 /* Assets.xcassets in Resources */,
 				71D865F4228992750074B051 /* Main.storyboard in Resources */,
 			);
@@ -712,6 +722,7 @@
 				711EA524228A600000118C6F /* STBaseViewController.swift in Sources */,
 				716067E7228C176F00945547 /* BaseModel.swift in Sources */,
 				71D8661D228996090074B051 /* STTabBarViewController.swift in Sources */,
+				7122963F229D34010024427A /* NoticeListViewController.swift in Sources */,
 				711E7F992293997600DF4CBF /* MineHeaderView.swift in Sources */,
 				712D1AF52297F24200783FDD /* NSString+LTLSExtension.m in Sources */,
 				71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */,
@@ -722,6 +733,7 @@
 				71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */,
 				711EA530228A689500118C6F /* MineViewController.swift in Sources */,
 				7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */,
+				71229642229D369C0024427A /* NoticeListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
