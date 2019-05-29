@@ -21,6 +21,8 @@ class STNavigationController: UINavigationController {
         navBar.barTintColor = UIColor.white
         navBar.tintColor = UIColor.black
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black, NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 16)]
+        
+        self.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     /**

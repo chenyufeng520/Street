@@ -23,6 +23,10 @@
 		7122963F229D34010024427A /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963E229D34010024427A /* NoticeListViewController.swift */; };
 		71229642229D369C0024427A /* NoticeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71229640229D369C0024427A /* NoticeListCell.swift */; };
 		71229643229D369C0024427A /* NoticeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71229641229D369C0024427A /* NoticeListCell.xib */; };
+		7122B7C7229E260F00FBB9C5 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122B7C5229E260F00FBB9C5 /* CardCollectionViewCell.swift */; };
+		7122B7C8229E260F00FBB9C5 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7122B7C6229E260F00FBB9C5 /* CardCollectionViewCell.xib */; };
+		7122B7CD229E845700FBB9C5 /* ShopCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122B7CB229E845700FBB9C5 /* ShopCardCell.swift */; };
+		7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7122B7CC229E845700FBB9C5 /* ShopCardCell.xib */; };
 		71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234E38228EC17000632131 /* StreetBannerCell.swift */; };
 		71236ABC2292B88600AE638D /* StreetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABB2292B88600AE638D /* StreetHeaderView.swift */; };
 		71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236ABD2292C90600AE638D /* STWebViewController.swift */; };
@@ -85,6 +89,10 @@
 		7122963E229D34010024427A /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
 		71229640229D369C0024427A /* NoticeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListCell.swift; sourceTree = "<group>"; };
 		71229641229D369C0024427A /* NoticeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeListCell.xib; sourceTree = "<group>"; };
+		7122B7C5229E260F00FBB9C5 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		7122B7C6229E260F00FBB9C5 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		7122B7CB229E845700FBB9C5 /* ShopCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCardCell.swift; sourceTree = "<group>"; };
+		7122B7CC229E845700FBB9C5 /* ShopCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCardCell.xib; sourceTree = "<group>"; };
 		71234E38228EC17000632131 /* StreetBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetBannerCell.swift; sourceTree = "<group>"; };
 		71236ABB2292B88600AE638D /* StreetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetHeaderView.swift; sourceTree = "<group>"; };
 		71236ABD2292C90600AE638D /* STWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STWebViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				711E7F982293997600DF4CBF /* MineHeaderView.swift */,
+				7122B7C5229E260F00FBB9C5 /* CardCollectionViewCell.swift */,
+				7122B7C6229E260F00FBB9C5 /* CardCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 		711EA512228A5E2500118C6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7122B7CB229E845700FBB9C5 /* ShopCardCell.swift */,
+				7122B7CC229E845700FBB9C5 /* ShopCardCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,7 +584,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D865F9228992750074B051 /* LaunchScreen.storyboard in Resources */,
+				7122B7C8229E260F00FBB9C5 /* CardCollectionViewCell.xib in Resources */,
 				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
+				7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */,
 				71D865F6228992750074B051 /* Assets.xcassets in Resources */,
 				71D865F4228992750074B051 /* Main.storyboard in Resources */,
 			);
@@ -705,11 +719,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				716067E5228BC49A00945547 /* NetWorkTool.swift in Sources */,
+				7122B7CD229E845700FBB9C5 /* ShopCardCell.swift in Sources */,
 				712D1AEF2297EF9D00783FDD /* LTLSSettingManager.m in Sources */,
 				71D865EF228992750074B051 /* AppDelegate.swift in Sources */,
 				7188CA6F229C05C500239118 /* MessageListCell.swift in Sources */,
 				711EA52E228A688100118C6F /* ShopViewController.swift in Sources */,
 				711EA528228A683D00118C6F /* HomeStreetViewController.swift in Sources */,
+				7122B7C7229E260F00FBB9C5 /* CardCollectionViewCell.swift in Sources */,
 				711E7F9B22939FDF00DF4CBF /* StreetCollectionViewCell.swift in Sources */,
 				71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */,
 				7188CA6D229C052500239118 /* MessageListModel.swift in Sources */,

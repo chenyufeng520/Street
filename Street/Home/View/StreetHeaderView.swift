@@ -9,6 +9,8 @@
 import UIKit
 import Kingfisher
 
+let streetHeaderCellIden = "streetHeaderCellIden"
+
 protocol StreetHeaderSelectDelegate {
     func streetHeaderSelectWithCurrentIndex(index:NSInteger, streetId:String)
 }
@@ -17,8 +19,6 @@ class StreetHeaderView: UIView {
     
     var delegate:StreetHeaderSelectDelegate?
     var titleArray = [StreetNavModel]()
-    
-    let Identifier = "cell";
     
     lazy var collectionView : UICollectionView = {
         
@@ -31,7 +31,7 @@ class StreetHeaderView: UIView {
         collection.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         collection.delegate = self
         collection.dataSource = self
-        collection.register(StreetCollectionViewCell.self, forCellWithReuseIdentifier: Identifier)
+        collection.register(StreetCollectionViewCell.self, forCellWithReuseIdentifier: streetHeaderCellIden)
         collection.showsHorizontalScrollIndicator = false
         return collection
     }()
@@ -63,7 +63,7 @@ extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell:StreetCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath) as! StreetCollectionViewCell
+        let cell:StreetCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: streetHeaderCellIden, for: indexPath) as! StreetCollectionViewCell
         
         let model:StreetNavModel = self.titleArray[indexPath.row]
         cell.showImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.pic.src)!))

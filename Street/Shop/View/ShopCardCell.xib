@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShopCardCell" customModule="Street" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="243"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="172" height="243"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HoH-H5-Y57">
+                        <rect key="frame" x="0.0" y="0.0" width="172" height="173"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cna-fw-THt">
+                        <rect key="frame" x="5" y="222" width="25.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="JMb-FS-umv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="0.10825813080212654" green="0.84734280290144126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西米" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-HK-SKr">
+                        <rect key="frame" x="34.5" y="222" width="20.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="phU-TI-v5K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="520申请" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oer-95-HVA">
+                        <rect key="frame" x="123" y="222" width="44" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="9Nn-WY-oEX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西五街周边 仅限每日机灵喵领取 快来领取吧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz0-qr-C5M">
+                        <rect key="frame" x="5" y="178" width="162" height="29"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅剩 5 份" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-Rx-rYO">
+                        <rect key="frame" x="98" y="144" width="64" height="24"/>
+                        <color key="backgroundColor" red="1" green="0.087315916146518346" blue="0.08797418573475968" alpha="0.69389447773972601" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="3te-RA-6jp"/>
+                            <constraint firstAttribute="width" constant="64" id="H42-Rw-TIk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Bz0-qr-C5M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="3vn-kX-iKN"/>
+                <constraint firstAttribute="trailing" secondItem="Oer-95-HVA" secondAttribute="trailing" constant="5" id="4Rv-he-GwT"/>
+                <constraint firstItem="Bz0-qr-C5M" firstAttribute="top" secondItem="Vrb-Rx-rYO" secondAttribute="bottom" constant="10" id="9Ab-QP-4Mt"/>
+                <constraint firstAttribute="bottom" secondItem="4g0-HK-SKr" secondAttribute="bottom" constant="5" id="AA6-k5-aFP"/>
+                <constraint firstAttribute="trailing" secondItem="Vrb-Rx-rYO" secondAttribute="trailing" constant="10" id="D2h-E1-0Zp"/>
+                <constraint firstItem="4g0-HK-SKr" firstAttribute="leading" secondItem="cna-fw-THt" secondAttribute="trailing" constant="4" id="Eqg-Fy-UeH"/>
+                <constraint firstAttribute="bottom" secondItem="Oer-95-HVA" secondAttribute="bottom" constant="5" id="M0Z-cK-c5B"/>
+                <constraint firstAttribute="trailing" secondItem="HoH-H5-Y57" secondAttribute="trailing" id="RmD-Gd-xV6"/>
+                <constraint firstAttribute="trailing" secondItem="Bz0-qr-C5M" secondAttribute="trailing" constant="5" id="TYD-dX-F5Q"/>
+                <constraint firstAttribute="bottom" secondItem="cna-fw-THt" secondAttribute="bottom" constant="5" id="W95-xX-H7i"/>
+                <constraint firstItem="cna-fw-THt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="dfj-ud-nRT"/>
+                <constraint firstAttribute="bottom" secondItem="HoH-H5-Y57" secondAttribute="bottom" constant="70" id="fDT-In-mw5"/>
+                <constraint firstItem="HoH-H5-Y57" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nHB-Zv-NMY"/>
+                <constraint firstItem="Bz0-qr-C5M" firstAttribute="top" secondItem="HoH-H5-Y57" secondAttribute="bottom" constant="5" id="nms-qL-vAm"/>
+                <constraint firstItem="HoH-H5-Y57" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="spM-hs-UIP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="172" height="243"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-148.80000000000001" y="128.18590704647679"/>
+        </collectionViewCell>
+    </objects>
+</document>
