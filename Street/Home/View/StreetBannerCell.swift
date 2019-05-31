@@ -12,7 +12,17 @@ import Kingfisher
 
 class StreetBannerCell: UITableViewCell {
     
-    var showImageView = UIImageView()
+    // MARK:- 控件属性
+    private var showImageView = UIImageView()
+    
+    // MARK:- 定义模型属性
+    var model:StreetModel? {
+        didSet {
+            if let url = URL(string:model?.pict_url.src ?? "") {
+                showImageView.kf.setImage(with: ImageResource.init(downloadURL:url))
+            }
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
@@ -41,13 +51,6 @@ class StreetBannerCell: UITableViewCell {
             make.bottom.equalTo(self).offset(-10)
         }
         
-    }
-    
-    func loadCellWithModel(model:StreetModel) {
-        
-        let url = URL(string:model.pic.src)
-        
-        showImageView.kf.setImage(with: ImageResource.init(downloadURL:url!))
     }
     
     override func awakeFromNib() {

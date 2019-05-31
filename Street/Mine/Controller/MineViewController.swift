@@ -22,12 +22,12 @@ class MineViewController: STBaseViewController {
         layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
         
-        let collection = UICollectionView.init(frame:CGRect.init(x: 0, y: kNavigationHeight, width:SCREEN_WIDTH, height: SCREEN_HEIGHT - kNavigationHeight - kTabBarHeight), collectionViewLayout: layout)
+        let collection = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collection.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         collection.delegate = self
         collection.dataSource = self
         collection.register(UINib(nibName: "CardCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: mineListCellIden)
-        collection.showsHorizontalScrollIndicator = false
+        collection.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         return collection
     }()
     

@@ -19,6 +19,8 @@
 		711EA52E228A688100118C6F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52D228A688100118C6F /* ShopViewController.swift */; };
 		711EA530228A689500118C6F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52F228A689500118C6F /* MineViewController.swift */; };
 		711EA534228A6FC900118C6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA533228A6FC900118C6F /* Common.swift */; };
+		71220CCF229F8A900055DC5F /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71220CCE229F8A900055DC5F /* ShopHeaderView.swift */; };
+		71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */; };
 		7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963C229D199C0024427A /* MessageHeaderView.swift */; };
 		7122963F229D34010024427A /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963E229D34010024427A /* NoticeListViewController.swift */; };
 		71229642229D369C0024427A /* NoticeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71229640229D369C0024427A /* NoticeListCell.swift */; };
@@ -85,6 +87,8 @@
 		711EA52D228A688100118C6F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		711EA52F228A689500118C6F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		711EA533228A6FC900118C6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		71220CCE229F8A900055DC5F /* ShopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
+		71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopHeaderView.xib; sourceTree = "<group>"; };
 		7122963C229D199C0024427A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
 		7122963E229D34010024427A /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
 		71229640229D369C0024427A /* NoticeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListCell.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 			children = (
 				7122B7CB229E845700FBB9C5 /* ShopCardCell.swift */,
 				7122B7CC229E845700FBB9C5 /* ShopCardCell.xib */,
+				71220CCE229F8A900055DC5F /* ShopHeaderView.swift */,
+				71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 			files = (
 				71D865F9228992750074B051 /* LaunchScreen.storyboard in Resources */,
 				7122B7C8229E260F00FBB9C5 /* CardCollectionViewCell.xib in Resources */,
+				71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */,
 				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
 				7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */,
 				71D865F6228992750074B051 /* Assets.xcassets in Resources */,
@@ -732,6 +739,7 @@
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
 				716067E9228C19D500945547 /* StreetModel.swift in Sources */,
+				71220CCF229F8A900055DC5F /* ShopHeaderView.swift in Sources */,
 				7188CA6B229BC8B600239118 /* UIColor+RGBColor.swift in Sources */,
 				712D1AF22297F1D200783FDD /* KeychainUUID.m in Sources */,
 				711EA52A228A685F00118C6F /* AttentionViewController.swift in Sources */,

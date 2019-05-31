@@ -96,7 +96,7 @@ extension HomeStreetViewController : UITableViewDataSource, UITableViewDelegate 
                 cell = StreetBannerCell.init(style: .default, reuseIdentifier: cellID)
             }
             
-            cell?.loadCellWithModel(model: tempModel)
+            cell?.model = tempModel
             cell?.selectionStyle = .none
             
             return cell!
