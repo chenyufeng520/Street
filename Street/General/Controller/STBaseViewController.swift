@@ -16,7 +16,6 @@ class STBaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
         return UIStatusBarStyle.lightContent

@@ -51,14 +51,16 @@
                         <nil key="textColor"/>
                         <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-xw-U2A">
-                        <rect key="frame" x="146" y="225" width="22" height="16"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-xw-U2A">
+                        <rect key="frame" x="108" y="225" width="60" height="16"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Nb4-8U-4fu"/>
                             <constraint firstAttribute="height" constant="16" id="SFT-0a-eze"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
                         <state key="normal" title="12" image="showUnPraise">
-                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
                 </subviews>

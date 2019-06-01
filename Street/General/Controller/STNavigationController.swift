@@ -8,8 +8,10 @@
 
 import UIKit
 
-class STNavigationController: UINavigationController {
+class STNavigationController: UINavigationController ,UINavigationControllerDelegate{
 
+    var popDelegate: UIGestureRecognizerDelegate?
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -22,7 +24,8 @@ class STNavigationController: UINavigationController {
         navBar.tintColor = UIColor.black
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black, NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 16)]
         
-        self.interactivePopGestureRecognizer?.isEnabled = true
+        self.popDelegate = self.interactivePopGestureRecognizer?.delegate
+        self.delegate = self
     }
     
     /**
@@ -45,13 +48,26 @@ class STNavigationController: UINavigationController {
     
     //返回
     @objc func navigationBackClick() -> Void {
-//        if UIApplication.shared.isNetworkActivityIndicatorVisible {
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//        }
+
         self.popViewController(animated: true)
     }
    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - UINavigationControllerDelegate方法
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        
+        if viewController == self.viewControllers[0] {
+            self.interactivePopGestureRecognizer!.delegate = self.popDelegate
+            
+        }else {
+            self.interactivePopGestureRecognizer!.delegate = nil
+            
+        }
+    }
+
+    
 }
+

@@ -22,6 +22,8 @@
 		7120B4AC22A22FF400F2B7A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120B4AB22A22FF400F2B7A9 /* LoginView.swift */; };
 		7120B4B222A230CF00F2B7A9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7120B4B122A230CF00F2B7A9 /* LoginView.xib */; };
 		7120B4BA22A2440B00F2B7A9 /* STLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120B4B922A2440B00F2B7A9 /* STLoginViewController.swift */; };
+		7120B4BC22A2677700F2B7A9 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7120B4BB22A2677700F2B7A9 /* MineHeaderView.xib */; };
+		7120B4BE22A27EE300F2B7A9 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120B4BD22A27EE300F2B7A9 /* CALayer+Extension.swift */; };
 		71220CCF229F8A900055DC5F /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71220CCE229F8A900055DC5F /* ShopHeaderView.swift */; };
 		71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */; };
 		7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963C229D199C0024427A /* MessageHeaderView.swift */; };
@@ -93,6 +95,8 @@
 		7120B4AB22A22FF400F2B7A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7120B4B122A230CF00F2B7A9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		7120B4B922A2440B00F2B7A9 /* STLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STLoginViewController.swift; sourceTree = "<group>"; };
+		7120B4BB22A2677700F2B7A9 /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		7120B4BD22A27EE300F2B7A9 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		71220CCE229F8A900055DC5F /* ShopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
 		71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopHeaderView.xib; sourceTree = "<group>"; };
 		7122963C229D199C0024427A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				711E7F982293997600DF4CBF /* MineHeaderView.swift */,
+				7120B4BB22A2677700F2B7A9 /* MineHeaderView.xib */,
 				7122B7C5229E260F00FBB9C5 /* CardCollectionViewCell.swift */,
 				7122B7C6229E260F00FBB9C5 /* CardCollectionViewCell.xib */,
 			);
@@ -365,8 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				71D8661C228996090074B051 /* STTabBarViewController.swift */,
-				711EA523228A600000118C6F /* STBaseViewController.swift */,
 				711EA525228A60D700118C6F /* STNavigationController.swift */,
+				711EA523228A600000118C6F /* STBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				7188CA6A229BC8B600239118 /* UIColor+RGBColor.swift */,
+				7120B4BD22A27EE300F2B7A9 /* CALayer+Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */,
 				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
 				7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */,
+				7120B4BC22A2677700F2B7A9 /* MineHeaderView.xib in Resources */,
 				71D865F6228992750074B051 /* Assets.xcassets in Resources */,
 				71D865F4228992750074B051 /* Main.storyboard in Resources */,
 			);
@@ -778,6 +785,7 @@
 				711E7F9B22939FDF00DF4CBF /* StreetCollectionViewCell.swift in Sources */,
 				71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */,
 				7120B4AC22A22FF400F2B7A9 /* LoginView.swift in Sources */,
+				7120B4BE22A27EE300F2B7A9 /* CALayer+Extension.swift in Sources */,
 				7188CA6D229C052500239118 /* MessageListModel.swift in Sources */,
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
