@@ -19,6 +19,9 @@
 		711EA52E228A688100118C6F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52D228A688100118C6F /* ShopViewController.swift */; };
 		711EA530228A689500118C6F /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA52F228A689500118C6F /* MineViewController.swift */; };
 		711EA534228A6FC900118C6F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711EA533228A6FC900118C6F /* Common.swift */; };
+		7120B4AC22A22FF400F2B7A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120B4AB22A22FF400F2B7A9 /* LoginView.swift */; };
+		7120B4B222A230CF00F2B7A9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7120B4B122A230CF00F2B7A9 /* LoginView.xib */; };
+		7120B4BA22A2440B00F2B7A9 /* STLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120B4B922A2440B00F2B7A9 /* STLoginViewController.swift */; };
 		71220CCF229F8A900055DC5F /* ShopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71220CCE229F8A900055DC5F /* ShopHeaderView.swift */; };
 		71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */; };
 		7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122963C229D199C0024427A /* MessageHeaderView.swift */; };
@@ -87,6 +90,9 @@
 		711EA52D228A688100118C6F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		711EA52F228A689500118C6F /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		711EA533228A6FC900118C6F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		7120B4AB22A22FF400F2B7A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7120B4B122A230CF00F2B7A9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		7120B4B922A2440B00F2B7A9 /* STLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STLoginViewController.swift; sourceTree = "<group>"; };
 		71220CCE229F8A900055DC5F /* ShopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHeaderView.swift; sourceTree = "<group>"; };
 		71220CD0229F8ABF0055DC5F /* ShopHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopHeaderView.xib; sourceTree = "<group>"; };
 		7122963C229D199C0024427A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
@@ -380,6 +386,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7120B4B322A2376200F2B7A9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7120B4B422A2376200F2B7A9 /* Controller */,
+				7120B4B522A2376200F2B7A9 /* Model */,
+				7120B4B622A2376200F2B7A9 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7120B4B422A2376200F2B7A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7120B4B922A2440B00F2B7A9 /* STLoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7120B4B522A2376200F2B7A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7120B4B622A2376200F2B7A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7120B4AB22A22FF400F2B7A9 /* LoginView.swift */,
+				7120B4B122A230CF00F2B7A9 /* LoginView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		712D1AE62297EAAB00783FDD /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,8 +467,9 @@
 				711EA513228A5E4300118C6F /* Publish */,
 				711EA50F228A5E1F00118C6F /* Shop */,
 				711EA50B228A5DFF00118C6F /* Mine */,
-				71D865EE228992750074B051 /* AppDelegate.swift */,
+				7120B4B322A2376200F2B7A9 /* Login */,
 				712D1AE62297EAAB00783FDD /* NetworkManager */,
+				71D865EE228992750074B051 /* AppDelegate.swift */,
 				711EA533228A6FC900118C6F /* Common.swift */,
 				716067E4228BC49A00945547 /* NetWorkTool.swift */,
 				71D865F5228992750074B051 /* Assets.xcassets */,
@@ -591,6 +632,7 @@
 			files = (
 				71D865F9228992750074B051 /* LaunchScreen.storyboard in Resources */,
 				7122B7C8229E260F00FBB9C5 /* CardCollectionViewCell.xib in Resources */,
+				7120B4B222A230CF00F2B7A9 /* LoginView.xib in Resources */,
 				71220CD2229FACA30055DC5F /* ShopHeaderView.xib in Resources */,
 				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
 				7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */,
@@ -735,6 +777,7 @@
 				7122B7C7229E260F00FBB9C5 /* CardCollectionViewCell.swift in Sources */,
 				711E7F9B22939FDF00DF4CBF /* StreetCollectionViewCell.swift in Sources */,
 				71234E39228EC17000632131 /* StreetBannerCell.swift in Sources */,
+				7120B4AC22A22FF400F2B7A9 /* LoginView.swift in Sources */,
 				7188CA6D229C052500239118 /* MessageListModel.swift in Sources */,
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
@@ -756,6 +799,7 @@
 				711EA534228A6FC900118C6F /* Common.swift in Sources */,
 				71236ABE2292C90600AE638D /* STWebViewController.swift in Sources */,
 				711EA530228A689500118C6F /* MineViewController.swift in Sources */,
+				7120B4BA22A2440B00F2B7A9 /* STLoginViewController.swift in Sources */,
 				7122963D229D199C0024427A /* MessageHeaderView.swift in Sources */,
 				71229642229D369C0024427A /* NoticeListCell.swift in Sources */,
 			);
