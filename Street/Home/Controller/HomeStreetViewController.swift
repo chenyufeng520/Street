@@ -250,18 +250,16 @@ extension HomeStreetViewController {
     //MARK: - StreetListSelectDelegate代理
     func StreetListSelectCurrentUserImage(index: NSInteger, uid: String) {
         print("点击了第\(index)行,用户id为" + uid)
-        
-        let loginVC = STLoginViewController()
-        loginVC.modalPresentationStyle = .overCurrentContext
-        self.present(loginVC, animated: true, completion: nil)
+
+       let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.STTabBar.showLoginView()
     }
     
     func StreetListSelectCurrentStreet(index: NSInteger, streetId: String) {
         print("点击了第\(index)行,街区id为" + streetId)
         
-        let loginVC = STLoginViewController()
-        loginVC.modalPresentationStyle = .overCurrentContext
-        self.present(loginVC, animated: true, completion: nil)
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.STTabBar.showLoginView()
         
     }
 }

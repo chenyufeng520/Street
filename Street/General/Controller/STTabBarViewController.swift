@@ -9,15 +9,36 @@
 import UIKit
 
 class STTabBarViewController: UITabBarController {
-
+    
+    //定义一个变量，控制如何跳转
+    var change: Bool = true
+    
+    //MARK: --setter getter
+    var _lastSelectedIndex: NSInteger!
+    var lastSelectedIndex: NSInteger {
+        if _lastSelectedIndex == nil {
+            _lastSelectedIndex = NSInteger()
+            //判断是否相等,不同才设置
+            if (self.selectedIndex != selectedIndex) {
+                //设置最近一次
+                _lastSelectedIndex = self.selectedIndex;
+            }
+            //调用父类的setSelectedIndex
+            super.selectedIndex = selectedIndex
+        }
+        return _lastSelectedIndex
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let tabbar = UITabBar.appearance()
         tabbar.tintColor = UIColor.colorFromHex(rgbValue: 0x262626)
         tabbar.unselectedItemTintColor = UIColor.colorFromHex(rgbValue: 0xC0C0C0)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
         self.addChildViewControllers()
         
+        self.delegate = self
     }
     
     /**
@@ -31,7 +52,7 @@ class STTabBarViewController: UITabBarController {
         addChildViewController(childController: ShopViewController(), title: "福利", imageName: "shop")
         addChildViewController(childController: MineViewController(), title: "我的", imageName: "mine")
     }
-
+    
     /**
      # 初始化子控制器
      
@@ -45,12 +66,58 @@ class STTabBarViewController: UITabBarController {
         childController.tabBarItem.title = title;
         childController.title = title
         
-        if title.characters.count == 0 {
+        if title.isEmpty {
             childController.tabBarItem.imageInsets = UIEdgeInsets.init(top: 6, left: 0, bottom: -6, right: 0)
         }
         
         let navC = STNavigationController(rootViewController: childController)
         self.addChild(navC)
     }
+    
+}
 
+//MARK: -- UITabBar点击
+extension STTabBarViewController  {
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        //获取选中的item
+        let tabIndex = tabBar.items?.index(of: item)
+        if tabIndex != self.selectedIndex {
+            //设置最近一次变更
+            _lastSelectedIndex = self.selectedIndex
+        }
+        
+        //手动添加消息红点假数据
+        if tabIndex == 1 {
+            item.badgeValue = "\(arc4random()%20)"
+        }
+    }
+    
+}
+
+//MARK: -- UITabBarControllerDelegate
+extension STTabBarViewController:UITabBarControllerDelegate  {
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController == self.viewControllers![2]  {
+            if change {
+                self.selectedIndex = _lastSelectedIndex
+                showLoginView()
+                return false
+            } else {
+                return true
+            }
+        }
+        return true
+    }
+}
+
+// MARK: - 显示登录页
+extension STTabBarViewController {
+    
+    func showLoginView() {
+        let loginVC = STLoginViewController()
+        loginVC.modalPresentationStyle = .overCurrentContext
+        self.present(loginVC, animated: true, completion: nil)
+    }
 }
