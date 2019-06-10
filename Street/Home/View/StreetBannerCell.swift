@@ -42,6 +42,7 @@ class StreetBannerCell: UITableViewCell {
         showImageView.contentMode = .scaleAspectFill
         showImageView.layer.masksToBounds = true
         showImageView.layer.cornerRadius = 8
+        showImageView.backgroundColor = UIColor.white
         self.contentView.addSubview(showImageView)
         
         showImageView.snp.makeConstraints { (make) in

@@ -41,6 +41,8 @@
 		712D1AEF2297EF9D00783FDD /* LTLSSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AEE2297EF9D00783FDD /* LTLSSettingManager.m */; };
 		712D1AF22297F1D200783FDD /* KeychainUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AF02297F1D200783FDD /* KeychainUUID.m */; };
 		712D1AF52297F24200783FDD /* NSString+LTLSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 712D1AF42297F24100783FDD /* NSString+LTLSExtension.m */; };
+		715ADB6422AE62520087097B /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715ADB6222AE62520087097B /* FeedBackViewController.swift */; };
+		715ADB6522AE62520087097B /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 715ADB6322AE62520087097B /* FeedBackViewController.xib */; };
 		716067E5228BC49A00945547 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E4228BC49A00945547 /* NetWorkTool.swift */; };
 		716067E7228C176F00945547 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E6228C176F00945547 /* BaseModel.swift */; };
 		716067E9228C19D500945547 /* StreetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716067E8228C19D500945547 /* StreetModel.swift */; };
@@ -119,6 +121,8 @@
 		712D1AF12297F1D200783FDD /* KeychainUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainUUID.h; sourceTree = "<group>"; };
 		712D1AF32297F24100783FDD /* NSString+LTLSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LTLSExtension.h"; sourceTree = "<group>"; };
 		712D1AF42297F24100783FDD /* NSString+LTLSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTLSExtension.m"; sourceTree = "<group>"; };
+		715ADB6222AE62520087097B /* FeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
+		715ADB6322AE62520087097B /* FeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
 		716067E4228BC49A00945547 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		716067E6228C176F00945547 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		716067E8228C19D500945547 /* StreetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetModel.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				711EA52F228A689500118C6F /* MineViewController.swift */,
+				715ADB6222AE62520087097B /* FeedBackViewController.swift */,
+				715ADB6322AE62520087097B /* FeedBackViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				71229643229D369C0024427A /* NoticeListCell.xib in Resources */,
 				7122B7CE229E845700FBB9C5 /* ShopCardCell.xib in Resources */,
 				7120B4BC22A2677700F2B7A9 /* MineHeaderView.xib in Resources */,
+				715ADB6522AE62520087097B /* FeedBackViewController.xib in Resources */,
 				71D865F6228992750074B051 /* Assets.xcassets in Resources */,
 				71D865F4228992750074B051 /* Main.storyboard in Resources */,
 			);
@@ -789,6 +796,7 @@
 				7188CA6D229C052500239118 /* MessageListModel.swift in Sources */,
 				711EA526228A60D700118C6F /* STNavigationController.swift in Sources */,
 				711EA52C228A687200118C6F /* PublishViewController.swift in Sources */,
+				715ADB6422AE62520087097B /* FeedBackViewController.swift in Sources */,
 				716067E9228C19D500945547 /* StreetModel.swift in Sources */,
 				71220CCF229F8A900055DC5F /* ShopHeaderView.swift in Sources */,
 				7188CA6B229BC8B600239118 /* UIColor+RGBColor.swift in Sources */,

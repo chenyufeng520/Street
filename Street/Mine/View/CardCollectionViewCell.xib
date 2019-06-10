@@ -90,6 +90,7 @@
                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="praiseButton" destination="Mt5-xw-U2A" id="XyD-lU-If9"/>
                 <outlet property="showImageView" destination="d05-Fr-8oO" id="nfh-F1-YoD"/>
                 <outlet property="titleLabel" destination="0a5-i5-cAW" id="VVl-Ux-fwS"/>
                 <outlet property="userImageView" destination="pXA-xL-Lkw" id="yfw-qC-f1H"/>

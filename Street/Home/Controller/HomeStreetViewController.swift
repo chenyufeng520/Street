@@ -46,13 +46,16 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate,
             self.getListData(isRefresh: false)
         })
         
-        let queue = DispatchQueue.global()
-        queue.async {
-            self.getZoneNavData()
-        }
-        queue.async {
-            self.getListData(isRefresh: true)
-        }
+//        let queue = DispatchQueue.global()
+//        queue.async {
+//            self.getZoneNavData()
+//        }
+//        queue.async {
+//            self.getListData(isRefresh: true)
+//        }
+        
+        self.getZoneNavData()
+        self.getListData(isRefresh: true)
     }
     
     /// 头部UI
@@ -165,8 +168,6 @@ extension HomeStreetViewController {
 
         LTLSNetworkManager.shared()?.get("/community/articleStar", parameters: params, success: { (task, responseObject) in
             
-            objc_sync_enter(self)
-            
             if isRefresh == true {
                 self.listDataArray.removeAll()
             }
@@ -185,8 +186,6 @@ extension HomeStreetViewController {
                     }
                 }
             }
-            
-             objc_sync_exit(self)
             
             self.showTableView.reloadData()
             if isRefresh == true {
@@ -213,8 +212,6 @@ extension HomeStreetViewController {
         
         LTLSNetworkManager.shared()?.get("/config/zone/nav", parameters: nil, success: { (task, responseObject) in
             
-            objc_sync_enter(self)
-            
             var titleArray = [StreetNavModel]()
             if let dic = responseObject as? [String : Any] {
                 if let dataDic = dic["data"] as? [String : Any] {
@@ -225,8 +222,6 @@ extension HomeStreetViewController {
                     }
                 }
             }
-            
-            objc_sync_exit(self)
             
             DispatchQueue.main.async {
                 self.configHeaderNavUI(titleArray: titleArray)

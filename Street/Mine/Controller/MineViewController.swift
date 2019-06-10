@@ -22,6 +22,26 @@ class MineViewController: STBaseViewController {
         return headerView
     }()
     
+    lazy var feedBackButton : UIButton = {
+        let button = UIButton.init(type: UIButton.ButtonType.custom)
+        button .setTitle("用户反馈", for: .normal)
+        button.setImage(UIImage(named: "feedback"), for: .normal)
+        button.backgroundColor = UIColor.white
+        button.setTitleColor(UIColor.colorFromHex(rgbValue: 0x151515), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 4)
+        button.addTarget(self, action: #selector(feedbackButtonAction), for: .touchUpInside)
+        
+        button.frame = CGRect(x: SCREEN_WIDTH - 80, y: SCREEN_HEIGHT - kTabBarHeight - 90, width: 80, height: 30)
+        let path = UIBezierPath(roundedRect: button.bounds, byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: CGSize(width: 15, height: 15))
+        let mask = CAShapeLayer.init()
+        mask.frame = button.bounds;
+        mask.path = path.cgPath
+        button.layer.mask = mask
+        
+        return button
+    }()
+    
     lazy var collectionView : UICollectionView = {
         
         let layout = UICollectionViewFlowLayout.init()
@@ -29,16 +49,15 @@ class MineViewController: STBaseViewController {
         layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
         
-        let collection = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = UIColor.colorFromHex(rgbValue: 0xF1F1F1)
         collection.delegate = self
         collection.dataSource = self
         collection.register(UINib(nibName: "CardCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: mineListCellIden)
-        collection.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         //防止iOS11BUG，顶部偏移
-        //        if #available(iOS 11.0, *) {
-        //            collection.contentInsetAdjustmentBehavior = .never
-        //        }
+        if #available(iOS 11.0, *) {
+            collection.contentInsetAdjustmentBehavior = .never
+        }
         return collection
     }()
     
@@ -46,9 +65,14 @@ class MineViewController: STBaseViewController {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         view.addSubview(collectionView)
+        collectionView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT  - kTabBarHeight)
+        //头部
         collectionView.addSubview(mineHeaderView)
         mineHeaderView.delegate = self
         collectionView.contentInset = UIEdgeInsets(top: mineHeaderViewH, left: 0, bottom: 0, right: 0)
+        
+        //用户反馈
+        view.addSubview(feedBackButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,12 +102,10 @@ extension MineViewController :UICollectionViewDelegate ,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell:CardCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: mineListCellIden, for: indexPath) as! CardCollectionViewCell
-        
-        //        cell.showImageView.backgroundColor = UIColor.randomColor()
-        //        cell.nickNameLabel.text = "懒羊羊\(indexPath.item)"
-        //        cell.titleLabel.text = "测试标题\(indexPath.item)"
-        
+   
         cell.backgroundColor = UIColor.white
+        cell.titleLabel.text = "卡片标题详情\(indexPath.item)"
+        cell.praiseButton.setTitle("\(arc4random()%50)", for: .normal)
         return cell
     }
     
@@ -128,12 +150,29 @@ extension MineViewController :MineHeaderViewDelegate {
 extension MineViewController:UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offSetY = scrollView.contentOffset.y + mineHeaderViewH
+        var offSetY = scrollView.contentOffset.y + mineHeaderViewH
+        
+        if offSetY < 0 {
+            offSetY = 0
+            collectionView.setContentOffset(CGPoint(x: 0, y: -mineHeaderViewH), animated: false)
+            return
+        }
+        
         if offSetY > kNavigationHeight {
             self.navigationController?.setNavigationBarHidden(false, animated: true)
+
         }
         else {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
+    }
+}
+
+// MARK: - 用户反馈
+extension MineViewController {
+    
+    @objc func feedbackButtonAction() {
+        let feedbackVC = FeedBackViewController.init(nibName: "FeedBackViewController", bundle: nil)
+        self.navigationController?.pushViewController(feedbackVC, animated: true)
     }
 }

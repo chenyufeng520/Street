@@ -14,6 +14,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var praiseButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
