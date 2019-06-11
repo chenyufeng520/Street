@@ -192,7 +192,7 @@ extension HomeStreetViewController {
                 self.showTableView.mj_header.endRefreshing()
             }
             else {
-                self.showTableView.mj_header.endRefreshing()
+                self.showTableView.mj_footer.endRefreshing()
             }
 
         }, failure: { (task, responseObject, error) in
@@ -201,7 +201,7 @@ extension HomeStreetViewController {
                 self.showTableView.mj_header.endRefreshing()
             }
             else {
-                self.showTableView.mj_header.endRefreshing()
+                self.showTableView.mj_footer.endRefreshing()
             }
             print(error as Any);
         })

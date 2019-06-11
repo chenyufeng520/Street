@@ -18,7 +18,7 @@ class StreetBannerCell: UITableViewCell {
     // MARK:- 定义模型属性
     var model:StreetModel? {
         didSet {
-            if let url = URL(string:model?.pict_url.src ?? "") {
+            if let url = URL(string:(model?.pic.src)! + kPicSale(750)) {
                 showImageView.kf.setImage(with: ImageResource.init(downloadURL:url))
             }
         }

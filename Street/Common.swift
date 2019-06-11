@@ -40,3 +40,8 @@ let kTopSafeHeight = CGFloat(isPhoneX ? 44 : 0)
 //底部安全区域远离高度
 let kBottomSafeHeight = CGFloat(isPhoneX ? 34 : 0)
 
+//图片压缩处理
+func kPicSale(_ sale:CGFloat) -> String {
+    return "?imageMogr2/auto-orient/interlace/1/thumbnail/\(sale)x%3E/quality/80"
+}
+

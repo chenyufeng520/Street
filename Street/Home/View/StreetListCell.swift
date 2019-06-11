@@ -159,10 +159,10 @@ class StreetListCell: UITableViewCell {
     func loadCellWithModel(model:StreetModel) {
  
         self.currentModel = model
-        if let avatarUrl = URL(string:model.avatar) {
+        if let avatarUrl = URL(string:model.avatar + kPicSale(100)) {
             userImageView.kf.setImage(with: ImageResource.init(downloadURL:avatarUrl),placeholder:UIImage(named: "header_default"))
         }
-        if let showUrl = URL(string:model.pict_url.src) {
+        if let showUrl = URL(string:model.pict_url.src + kPicSale(750)) {
             showImageView.kf.setImage(with: ImageResource.init(downloadURL:showUrl))
         }
         

@@ -66,7 +66,7 @@ extension StreetHeaderView :UICollectionViewDelegate ,UICollectionViewDataSource
         let cell:StreetCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: streetHeaderCellIden, for: indexPath) as! StreetCollectionViewCell
         
         let model:StreetNavModel = self.titleArray[indexPath.row]
-        cell.showImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.pic.src)!))
+        cell.showImageView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.pic.src+kPicSale(100))!))
         cell.titleLable.text = model.title
         
         return cell
