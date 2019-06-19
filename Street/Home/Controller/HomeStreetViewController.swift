@@ -26,6 +26,9 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate,
         table.separatorStyle = .none
         if #available(iOS 11.0, *) {
             table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+            table.estimatedRowHeight = 0
+            table.estimatedSectionHeaderHeight = 0
+            table.estimatedSectionFooterHeight = 0
         }
         return table
     }()

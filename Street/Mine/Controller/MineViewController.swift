@@ -137,6 +137,8 @@ extension MineViewController :MineHeaderViewDelegate {
     
     func mineHeaderViewShareClick(_ headerView: MineHeaderView) {
         print("点击分享")
+        let shareTool = CustomShareTool.init(frame: .zero)
+        shareTool.showShareView()
     }
     
     func mineHeaderViewPersonSettingClick(_ headerView: MineHeaderView) {
