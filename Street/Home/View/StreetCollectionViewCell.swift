@@ -28,7 +28,7 @@ class StreetCollectionViewCell: UICollectionViewCell {
         showImageView = UIImageView.init()
         showImageView.frame = self.bounds
         showImageView.layer.cornerRadius = 8
-        showImageView.contentMode = .scaleToFill
+        showImageView.contentMode = .scaleAspectFill
         showImageView.layer.masksToBounds = true
         self.addSubview(showImageView)
         

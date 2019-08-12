@@ -10,9 +10,9 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'MJRefresh'
 pod 'SVProgressHUD'
-pod 'HandyJSON'
-pod 'Kingfisher'
 pod 'AFNetworking'
+pod 'Kingfisher'
+pod 'HandyJSON'
 
   # Pods for Street
 

@@ -49,14 +49,6 @@ class HomeStreetViewController: STBaseViewController,StreetHeaderSelectDelegate,
             self.getListData(isRefresh: false)
         })
         
-//        let queue = DispatchQueue.global()
-//        queue.async {
-//            self.getZoneNavData()
-//        }
-//        queue.async {
-//            self.getListData(isRefresh: true)
-//        }
-        
         self.getZoneNavData()
         self.getListData(isRefresh: true)
     }
